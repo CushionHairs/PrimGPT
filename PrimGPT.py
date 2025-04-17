@@ -221,7 +221,7 @@ def render_sidebar() -> Tuple[str, str]:
 
         # Function selection
         # Determine available functions based on potential model capabilities (example)
-        if st.session_state[STATE_OPENAI_MODEL] in ['gpt-4.5-preview',]: 
+        if st.session_state[STATE_OPENAI_MODEL] in ['gpt-4.5-preview', 'gpt-4.1', 'gpt-4.1 (long context)', 'gpt-4.1-mini', 'gpt-4.1-mini (long context)', 'gpt-4.1-nano', 'gpt-4.1-nano (long context)']: 
              function_options = ['Chat', 'Youtube', 'Document']
         else:
              function_options = ['Chat'] # Fallback
