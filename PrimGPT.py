@@ -174,10 +174,10 @@ def render_sidebar() -> Tuple[str, str]:
 
         # Model selection - Updated model names
         ai_model_options = {
-            'gpt-4.5-preview': 'gpt-4.5(Best)',
             'gpt-4.1': 'gpt-4.1(Best)',
             'gpt-4.1-mini': 'gpt-4.1(Middle)',
             'gpt-4.1-nano': 'gpt-4.1(Light)',
+            'gpt-4.5-preview': 'gpt-4.5(Best)',
             'o3-mini': 'o3-mini(Logical)',
             'o4-mini': 'o4-mini(Logical)',
             # Add other models if needed
@@ -194,14 +194,14 @@ def render_sidebar() -> Tuple[str, str]:
 
         # Update token size based on selection (example values, adjust as needed)
         # Note: Token size might refer to context window, not always output limit. Clarify usage.
-        if selected_model_key == 'gpt-4.5-preview':
-            st.session_state[STATE_TOKEN_SIZE] = 128000 # Context window size
-        elif selected_model_key == 'gpt-4.1':
+        if selected_model_key == 'gpt-4.1':
             st.session_state[STATE_TOKEN_SIZE] = 30000 # Context window size
         elif selected_model_key == 'gpt-4.1-mini':
             st.session_state[STATE_TOKEN_SIZE] = 200000 # Context window size
         elif selected_model_key == 'gpt-4.1-nano':
             st.session_state[STATE_TOKEN_SIZE] = 200000 # Context window size
+        elif selected_model_key == 'gpt-4.5-preview':
+            st.session_state[STATE_TOKEN_SIZE] = 128000 # Context window size
         elif selected_model_key == 'o3-mini':
             st.session_state[STATE_TOKEN_SIZE] = 200000 # Context window size
         elif selected_model_key == 'o4-mini':
